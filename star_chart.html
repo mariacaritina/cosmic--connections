@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Astro Calculator</title>
+<style>
+     body {
+  background-color: lightblue;
+}  
+</style>
 </head>
-<body>
-  
-  <body style="background-color:powderblue;">
 
-<div class="w3-display-container" style="margin-bottom:50px">
-  <img src="images/mercury.jpg" style="width:100%">
-  <div class="w3-display-bottomleft w3-container w3-orange w3-hover-red w3-hide-small"
-   style="bottom:10%;opacity:0.7;width:50%">
-  <h2><b>CCOSMIC CONNECTIONS</b></h2>
-  <h4>Find your next friend, new clique or romantic partner.</h4>
-</div>
-</div>
+<body>
+
+<center><h1>Choose Month to Get Sun Sign</h1></center>
+
+<center><p id="result"</p></center>
+<center>
+<select id="country">
+<option value="None">-- Select --</option>
+<option value="Aquarius">February</option>
+<option value="Taurus">March</option>
+<option value="Sagittarius">April</option>
+<option value="Pisces">May</option>
+<option value="Cancer">June</option>
+<option value="Gemini">July</option>
+<option value="Scorpio">August</option>
+<option value="Leo">September</option>
+<option value="Libra">October</option>
+<option value="Virgo">November</option>
+<option value="Aries">December</option>
+<option value="Capricorn">January</option>
+</center>
+</select>
+
+<script>
+
+function GetSelectedValue(){
+var e = document.getElementById("country");
+var result = e.options[e.selectedIndex].value;
+
+document.getElementById("result").innerHTML = result;
+}
+
+function GetSelectedText(){
+var e = document.getElementById("country");
+var result = e.options[e.selectedIndex].text;
+
+document.getElementById("result").innerHTML = result;
+}
+
+</script>
+
+<br/>
+<br/>
+<button type="button" onclick="GetSelectedValue()">Click Here!</button>
+
+
+</body>
+
+</html>
